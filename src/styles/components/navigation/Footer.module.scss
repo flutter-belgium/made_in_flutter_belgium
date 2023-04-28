@@ -1,0 +1,28 @@
+@import '../../colors';
+
+.container {
+    color: $color-text-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+
+    p:first-child {
+        margin: 0.5em;
+    }
+
+    p:last-child {
+        padding-bottom: 2em;
+    }
+
+    .languageBtn {
+        cursor: pointer;
+        margin: 0 0.2em;
+        padding: 1em 1.5em;
+    }
+
+    .activeLocale {
+        color: $color-accent;
+    }
+}

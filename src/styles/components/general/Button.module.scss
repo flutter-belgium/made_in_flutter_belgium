@@ -1,0 +1,25 @@
+@import '../../colors';
+@import '../../mixins';
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1em 2em;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 800;
+    text-transform: capitalize;
+    background-color: $color-accent;
+    cursor: pointer;
+
+    p {
+        margin: 0;
+    }
+}
+
+.btn:hover {
+    background-color: $color-accent-dark;
+    color: $color-text;
+}

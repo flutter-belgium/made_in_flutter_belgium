@@ -1,0 +1,29 @@
+@mixin belowPhone {
+    @media only screen and (max-width: 501px) {
+        @content;
+    }
+}
+
+@mixin betweenPhoneAndTabletPortrait {
+    @media (min-width: 501px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin betweenTabletPortraitAndSmallLaptop {
+    @media (min-width: 767px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin belowTabletAndSmallLaptops {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin belowLaptops {
+    @media screen and (min-width: 1920px){
+        @content;
+    }
+}

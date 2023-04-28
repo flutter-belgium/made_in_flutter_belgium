@@ -1,0 +1,23 @@
+{
+    "meta_description": "",
+    "meta_keywords": "",
+    "nav_home": "Home",
+    "error_404": "This page could not be found",
+    "disclamer_dev": "Website by",
+    "cookie_policy_title": "Cookie policy",
+    "cookie_policy_text": "Add cookie policy",
+    "privacy_policy_title": "Privacy policy",
+    "privacy_policy_text": "Add privacy policy",
+    "cookie_consent_always_on": "Always on",
+    "cookie_consent_essential_title": "Essenetial cookies",
+    "cookie_consent_essential_description": "We use cookies to make the website work optimally. Only the most necessary are kept here.",
+    "cookie_consent_statistics_title": "Statistics cookies",
+    "cookie_consent_statistics_description": "To see where we can improve the website, and when the website is used, we use cookies to track anonymous statistics via Google Analytics",
+    "cookie_consent_header_title": "Cookies?",
+    "cookie_consent_header_subtitle": "One last question before you can use our website",
+    "cookie_consent_header_description": "We use cookies to make the website work optimally. Analytics is off by default. Pressing accept all here will turn it on. You can still change it later",
+    "cookie_consent_policy_read_more": "Read the cookie policy",
+    "cookie_consent_decline_btn": "Deny",
+    "cookie_consent_accept_btn": "Accept",
+    "cookie_consent_accept_all_btn": "Accept all"
+}

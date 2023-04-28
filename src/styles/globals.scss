@@ -1,0 +1,71 @@
+@import 'colors';
+@import 'mixins';
+@import 'utilities';
+@import 'text';
+@import 'cookie_consent';
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=optional');
+
+/** RESET **/
+html,
+body {
+    height: 100%;
+}
+
+#__next {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+    white-space: pre-line;
+}
+
+/** TEXT STYLES **/
+body {
+    margin: 0;
+    color: $color-text;
+    background-color: $color-background;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 0 0 0.5em 0;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+/** LINKS **/
+a,
+button {
+    color: $color-text;
+}
+
+a:hover,
+button:hover {
+    color: $color-text-hover;
+}
+
+button {
+    border: none;
+    border-radius: $button-border-radius;
+}
+
+.yarl__slide_description {
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+.seek-bounce {
+    color: $color-accent;
+}
