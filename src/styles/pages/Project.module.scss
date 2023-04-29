@@ -48,6 +48,10 @@
         @include betweenPhoneAndTabletPortrait {
             display: block;
         }
+
+        @include betweenTabletPortraitAndSmallLaptop {
+            display: block;
+        }
     }
 
     .screenshotContainer {
@@ -58,6 +62,10 @@
         }
 
         @include betweenPhoneAndTabletPortrait {
+            display: none;
+        }
+
+        @include betweenTabletPortraitAndSmallLaptop {
             display: none;
         }
     }
