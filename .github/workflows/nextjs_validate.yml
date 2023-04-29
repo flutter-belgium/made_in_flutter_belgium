@@ -1,0 +1,13 @@
+name: nextjs validate
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: .github/workflows/scripts/bash/export.sh

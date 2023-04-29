@@ -13,7 +13,6 @@ const ProjectList = (props: ProjectListProps) => {
                     <ProjectListItem
                         key={index}
                         project={project} />
-
                 ))
             }
         </div>
