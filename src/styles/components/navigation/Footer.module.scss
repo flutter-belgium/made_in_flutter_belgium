@@ -2,11 +2,16 @@
 
 .container {
     color: $color-text-secondary;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem 0;
+    margin: 0.5rem 2em;
+
+    p {
+        text-align: center;
+    }
 
     p:first-child {
         margin: 0.5em;
