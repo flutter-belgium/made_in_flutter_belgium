@@ -6,9 +6,10 @@ const nextConfig = {
   reactStrictMode: false,
   env: {
     locale: 'nl',
-    basePath: '/',
+    basePath: '/flutter-belgium',
   },
   images: {
+    unoptimized: true,
     domains: [
       'api.madein.flutterbelgium.be',
     ],

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
-import Image from '@/components/general/Image'
 import style from '@/styles/components/navigation/Header.module.scss'
+import Image from 'next/image'
 
 const Header = () => {
     const [openMobileMenu, setMobileMenuOpen] = useState<boolean>(false)

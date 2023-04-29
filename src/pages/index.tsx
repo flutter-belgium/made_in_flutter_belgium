@@ -10,7 +10,7 @@ const HomePage = () => {
 
   useEffect(() => {
     viewModel.init()
-  }, [])
+  }, [viewModel])
 
   return (
     <>

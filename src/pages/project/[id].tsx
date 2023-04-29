@@ -6,7 +6,6 @@ import ProjectDetailViewModel from "@/viewmodel/project/detail/project_detail_vi
 import style from "@/styles/pages/project/[id].module.scss"
 import { useRouter } from "next/router"
 import Image from "next/image"
-import Link from "next/link"
 
 const ProjectDetailPage = () => {
   const router = useRouter()
@@ -15,7 +14,7 @@ const ProjectDetailPage = () => {
 
   useEffect(() => {
     viewModel.init(router.query.id as string)
-  }, [router.query.id])
+  }, [viewModel, router.query.id])
 
   const project = viewModel.project
   return (
