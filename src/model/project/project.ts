@@ -18,6 +18,8 @@ interface Project {
         appIconUrl: string,
         companyLogoUrl?: string,
         bannerUrl?: string,
+        mockupPrimaryUrl?: string,
+        mockupSecondaryUrl?: string,
         screenshotUrls: Array<string>,
     },
 }

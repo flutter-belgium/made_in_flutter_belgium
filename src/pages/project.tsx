@@ -8,6 +8,7 @@ import LinkSection from "@/components/general/link/LinkSection"
 import CompanyDetailViewModel from "@/viewmodel/project/detail/project_detail_viewmodel"
 import style from "@/styles/pages/Project.module.scss"
 import Link from "next/link"
+import ProjectScreenshots from "@/components/project/detail/ProjectScreenshots"
 
 const ProjectDetailPage = () => {
   const router = useRouter()
@@ -65,6 +66,12 @@ const ProjectDetailPage = () => {
                       </Link>
                   )}
                 </div>
+                <div className={style.phoneScreenshotContainer}>
+                  <ProjectScreenshots
+                    mockupPrimaryUrl={project.images.mockupPrimaryUrl}
+                    mockupSecondaryUrl={project.images.mockupSecondaryUrl}
+                    screenshotUrls={project.images.screenshotUrls} />
+                </div>
                 <LinkSection
                   title="Publisher"
                   largeImages={true}
@@ -74,8 +81,20 @@ const ProjectDetailPage = () => {
                   largeImages={false}
                   links={viewModel.devTeamLinks} />
               </div>
-              <div className={style.screenshotContainer}>
-              </div>
+              {
+                project.images.screenshotUrls.length === 0 ?
+                  (
+                    <></>
+                  ) :
+                  (
+                    <div className={style.screenshotContainer}>
+                      <ProjectScreenshots
+                        mockupPrimaryUrl={project.images.mockupPrimaryUrl}
+                        mockupSecondaryUrl={project.images.mockupSecondaryUrl}
+                        screenshotUrls={project.images.screenshotUrls} />
+                    </div>
+                  )
+              }
             </div>
 
         }
