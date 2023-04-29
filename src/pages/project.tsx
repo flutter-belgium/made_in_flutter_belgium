@@ -14,8 +14,8 @@ const ProjectDetailPage = () => {
   const viewModel = ProjectDetailViewModel()
 
   useEffect(() => {
-    viewModel.init(router.query.id as string)
-  }, [viewModel, router.query.id])
+    viewModel.init(router.query.projectName as string)
+  }, [viewModel, router.query.projectName])
 
   const project = viewModel.project
   return (
@@ -45,7 +45,7 @@ const ProjectDetailPage = () => {
                         target="_blank">
                         <Image
                           width={200}
-                          height={50}
+                          height={68}
                           src='images/appstore.svg'
                           alt={"AppStore"} />
                       </a>
@@ -58,7 +58,7 @@ const ProjectDetailPage = () => {
                         target="_blank">
                         <Image
                           width={220}
-                          height={50}
+                          height={68}
                           src='images/playstore.svg'
                           alt={"Playstore"} />
                       </a>
