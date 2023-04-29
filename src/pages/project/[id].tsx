@@ -2,10 +2,11 @@ import Meta from "@/components/general/Meta"
 import appConfig from "@/config/appConfig"
 import { useEffect } from "react"
 import PageContainer from "@/components/general/PageContainer"
-import ProjectDetailViewModel from "@/viewmodel/project/detail/project_detail_viewmodel"
-import style from "@/styles/pages/project/[id].module.scss"
 import { useRouter } from "next/router"
 import Image from "next/image"
+import LinkSection from "@/components/general/link/LinkSection"
+import ProjectDetailViewModel from "@/viewmodel/project/detail/project_detail_viewmodel"
+import style from "@/styles/pages/project/[id].module.scss"
 
 const ProjectDetailPage = () => {
   const router = useRouter()
@@ -63,6 +64,14 @@ const ProjectDetailPage = () => {
                       </a>
                   )}
                 </div>
+                <LinkSection
+                  title="Publisher"
+                  largeImages={true}
+                  links={viewModel.publisherLinks} />
+                <LinkSection
+                  title="Dev team"
+                  largeImages={false}
+                  links={viewModel.devTeamLinks} />
               </div>
               <div className={style.screenshotContainer}>
               </div>

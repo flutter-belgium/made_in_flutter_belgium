@@ -4,7 +4,7 @@ interface Project {
     publisher?: string,
     developers: Array<{
         githubUserName: string,
-        profilePicture: string,
+        profilePictureUrl: string,
     }>,
     releaseData: Date,
     links: {

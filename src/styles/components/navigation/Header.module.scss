@@ -43,12 +43,6 @@
                 @include belowTabletAndSmallLaptops {
                     display: flex;
                 }
-
-                button {
-                    background: none;
-                    border: none;
-                    cursor: pointer;
-                }
             }
         }
 
