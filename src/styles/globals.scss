@@ -33,7 +33,7 @@ h1 {
     font-size: 60px;
     margin: 0;
     @include belowPhone {
-        font-size: 40px;
+        font-size: 35px;
     }
     @include betweenPhoneAndTabletPortrait {
         font-size: 45px;
