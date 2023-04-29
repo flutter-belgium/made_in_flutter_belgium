@@ -32,15 +32,45 @@ body {
 h1 {
     font-size: 60px;
     margin: 0;
+    @include belowPhone {
+        font-size: 40px;
+    }
+    @include betweenPhoneAndTabletPortrait {
+        font-size: 45px;
+    }
+    @include betweenTabletPortraitAndSmallLaptop {
+        font-size: 50px;
+    }
+    @include belowLaptops {
+        font-size: 60px;
+    }
 }
 
 h2 {
     font-size: 20px;
     margin: 0 0 0.5em 0;
+    @include belowPhone {
+        font-size: 16px;
+    }
+    @include betweenPhoneAndTabletPortrait {
+        font-size: 18px;
+    }
+    @include betweenTabletPortraitAndSmallLaptop {
+        font-size: 20px;
+    }
 }
 
 h3 {
     font-size: 22px;
+    @include belowPhone {
+        font-size: 18px;
+    }
+    @include betweenPhoneAndTabletPortrait {
+        font-size: 20px;
+    }
+    @include betweenTabletPortraitAndSmallLaptop {
+        font-size: 22px;
+    }
 }
 
 /** LINKS **/
