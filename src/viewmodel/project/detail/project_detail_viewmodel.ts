@@ -4,6 +4,8 @@ import { logError } from "@/util/logger/logger"
 
 export default function ProjectDetailViewModel() {
     const [error, setError] = useState("")
+    const [publisherLinks, setPublisherLinks] = useState<Array<LinkItem>>([])
+    const [devTeamLinks, setDevTeamLinks] = useState<Array<LinkItem>>([])
     const [isLoading, setLoading] = useState(true)
     const [project, setProject] = useState<Project>()
 
@@ -16,6 +18,18 @@ export default function ProjectDetailViewModel() {
         try {
             const project = await projectsRepo.getProject(projectName)
             setProject(project)
+            setDevTeamLinks(project.developers.map((e) => ({
+                title: e.githubUserName,
+                imageUrl: e.profilePictureUrl,
+                website: `/developer/${e.githubUserName}`,
+            })))
+            if (project.publisher) {
+                setPublisherLinks([{
+                    title: project.publisher,
+                    imageUrl: project.images.companyLogoUrl!,
+                    website: `/company/${project.publisher}`,
+                }])
+            }
         } catch (e) {
             logError('Failed to get minimized projects', e)
         }
@@ -27,5 +41,7 @@ export default function ProjectDetailViewModel() {
         isLoading,
         error,
         project,
+        publisherLinks,
+        devTeamLinks,
     }
 }

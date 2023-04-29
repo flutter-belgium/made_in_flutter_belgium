@@ -1,6 +1,5 @@
 import style from '@/components/project/list/ProjectList.module.scss'
 import ProjectListItem from './item/ProjectListItem'
-import PageContainer from '@/components/general/PageContainer'
 
 interface ProjectListProps {
     projects: Array<MinimizedProject>,

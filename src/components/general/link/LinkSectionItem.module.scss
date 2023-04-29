@@ -1,0 +1,22 @@
+@import '@/styles/colors';
+
+
+.container {
+
+
+    .largeContainer {
+        img {
+            border-radius: 0;
+        }
+    }
+
+    .smallContainer {
+        img {
+            border-radius: 9999999em;
+        }
+    }
+    img {
+        object-fit: contain;
+        width: auto;
+    }
+}

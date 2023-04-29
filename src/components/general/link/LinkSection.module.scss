@@ -1,0 +1,11 @@
+@import '@/styles/colors';
+
+
+.container {
+    margin: 2em 0;
+
+    .linkItemsContainer {
+        display: flex;
+        gap: 1em;
+    }
+}
