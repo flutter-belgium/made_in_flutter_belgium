@@ -1,9 +1,23 @@
 @import '@/styles/colors';
+@import '@/styles/mixins';
 
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 2em;
+
+    @include belowPhone {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include betweenPhoneAndTabletPortrait {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include betweenTabletPortraitAndSmallLaptop {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include belowLaptops {
+        grid-template-columns: repeat(6, 1fr);
+    }
 
     .projectItem {
         aspect-ratio: 1/1;

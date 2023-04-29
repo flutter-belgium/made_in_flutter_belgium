@@ -65,21 +65,12 @@
 
             }
 
-            .triangle {
-                visibility: hidden;
-                margin-right: 1rem;
-            }
-
             a:hover:not(.active) {
                 color: $color-accent;
             }
 
             .active {
                 color: $color-accent;
-
-                .triangle {
-                    visibility: visible;
-                }
             }
 
             .active:hover {
@@ -90,6 +81,7 @@
         .openMobileMenu {
             @include belowTabletAndSmallLaptops {
                 display: flex;
+                align-items: center;
             }
         }
 
