@@ -43,7 +43,7 @@ const Footer = () => {
                     </svg>
                 </Link>
             </div>
-        </div >
+        </div>
     )
 }
 
