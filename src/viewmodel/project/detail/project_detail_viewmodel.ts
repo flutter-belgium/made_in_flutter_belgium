@@ -1,5 +1,5 @@
 import { useState } from "react"
-import * as projectsRepo from "@/repository/project/project_repository"
+import * as projectRepo from "@/repository/project/project_repository"
 import { logError } from "@/util/logger/logger"
 
 export default function ProjectDetailViewModel() {
@@ -16,22 +16,22 @@ export default function ProjectDetailViewModel() {
     async function getData(projectName: string) {
         setLoading(true)
         try {
-            const project = await projectsRepo.getProject(projectName)
+            const project = await projectRepo.getProject(projectName)
             setProject(project)
             setDevTeamLinks(project.developers.map((e) => ({
                 title: e.githubUserName,
                 imageUrl: e.profilePictureUrl,
-                website: `/developer/${e.githubUserName}`,
+                website: `/developer?githubUserName=${e.githubUserName}`,
             })))
             if (project.publisher) {
                 setPublisherLinks([{
                     title: project.publisher,
                     imageUrl: project.images.companyLogoUrl!,
-                    website: `/company/${project.publisher}`,
+                    website: `/company?name=${project.publisher}`,
                 }])
             }
         } catch (e) {
-            logError('Failed to get minimized projects', e)
+            logError('Failed to get project details', e)
         }
         setLoading(false)
     }

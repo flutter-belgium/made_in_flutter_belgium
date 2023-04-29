@@ -2,8 +2,6 @@
 @import '@/styles/mixins';
 
 .btn {
-    display: flex;
-    align-items: center;
     gap: 1rem;
     padding: 1em 2em;
     text-decoration: none;
@@ -11,15 +9,11 @@
     text-align: center;
     font-weight: 800;
     text-transform: capitalize;
-    background-color: $color-accent;
+    background-color: $color-primary;
+    color: $color-text-inverted;
     cursor: pointer;
 
     p {
         margin: 0;
     }
-}
-
-.btn:hover {
-    background-color: $color-accent-dark;
-    color: $color-text;
 }

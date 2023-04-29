@@ -4,6 +4,7 @@ import style from '@/styles/components/general/Button.module.scss'
 
 interface ButtonProps {
   title: string,
+  target?: string,
   linkTo?: string,
   onClick?: () => void,
 }
@@ -27,7 +28,8 @@ const Button = (props: ButtonProps) => {
   return (
     <Link
       className={style.btn}
-      href={props.linkTo ?? '/'}>
+      href={props.linkTo ?? '/'}
+      target={props.target}>
       {props.title}
     </Link>
   )
