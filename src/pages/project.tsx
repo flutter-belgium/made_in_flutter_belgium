@@ -5,13 +5,14 @@ import PageContainer from "@/components/general/PageContainer"
 import { useRouter } from "next/router"
 import Image from "next/image"
 import LinkSection from "@/components/general/link/LinkSection"
-import ProjectDetailViewModel from "@/viewmodel/project/detail/project_detail_viewmodel"
-import style from "@/styles/pages/project/[id].module.scss"
+import CompanyDetailViewModel from "@/viewmodel/project/detail/project_detail_viewmodel"
+import style from "@/styles/pages/Project.module.scss"
+import Link from "next/link"
 
 const ProjectDetailPage = () => {
   const router = useRouter()
 
-  const viewModel = ProjectDetailViewModel()
+  const viewModel = CompanyDetailViewModel()
 
   useEffect(() => {
     viewModel.init(router.query.name as string)
@@ -40,7 +41,7 @@ const ProjectDetailPage = () => {
                   {(
                     project.links.appstore == null
                       ? null :
-                      <a
+                      <Link
                         href={project.links.appstore}
                         target="_blank">
                         <Image
@@ -48,12 +49,12 @@ const ProjectDetailPage = () => {
                           height={68}
                           src='images/appstore.svg'
                           alt={"AppStore"} />
-                      </a>
+                      </Link>
                   )}
                   {(
                     project.links.playstore == null
                       ? null :
-                      <a
+                      <Link
                         href={project.links.playstore}
                         target="_blank">
                         <Image
@@ -61,7 +62,7 @@ const ProjectDetailPage = () => {
                           height={68}
                           src='images/playstore.svg'
                           alt={"Playstore"} />
-                      </a>
+                      </Link>
                   )}
                 </div>
                 <LinkSection

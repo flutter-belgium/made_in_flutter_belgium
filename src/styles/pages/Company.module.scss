@@ -1,0 +1,33 @@
+@import '@/styles/colors';
+
+.container {
+    display: flex;
+
+    .titleContainer {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        img {
+            border-radius: 0.25em;
+        }
+    }
+
+    .infoContainer {
+        width: 100%;
+
+        p {
+            font-size: 16px;
+            color: $color-primary-light;
+        }
+
+        .description {
+            margin-bottom: 2em;
+        }
+    }
+
+    .screenshotContainer {
+        width: 60%;
+        display: none;
+    }
+}
