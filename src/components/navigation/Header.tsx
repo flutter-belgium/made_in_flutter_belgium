@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import style from '@/styles/components/navigation/Header.module.scss'
 import Image from 'next/image'
+import PageContainer from '../general/PageContainer'
 
 const Header = () => {
     const [openMobileMenu, setMobileMenuOpen] = useState<boolean>(false)
@@ -12,7 +13,8 @@ const Header = () => {
 
     return (
         <div className={style.rootContainer}>
-            <div className='content-container'>
+            <PageContainer
+                ignorePadding={true}>
                 <div className={style.container}>
                     <div className={style.primaryHeader}>
                         <Link href='/'>
@@ -43,7 +45,7 @@ const Header = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </PageContainer>
         </div>
     )
 }

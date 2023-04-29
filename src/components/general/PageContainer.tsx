@@ -8,7 +8,7 @@ interface PageContainerProps {
 }
 
 const PageContainer = (props: PageContainerProps) => (
-  <div className={`${props.ignorePadding ? '' : style.pageContainer} ${props.noCentering  ? '' : 'content-container'}`}>
+  <div className={`${props.ignorePadding ? style.pageContainerNoVerticalPadding : style.pageContainer} ${props.noCentering  ? '' : 'content-container'}`}>
     {props.children}
   </div>
 )
