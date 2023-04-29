@@ -8,6 +8,7 @@ import LinkSection from "@/components/general/link/LinkSection"
 import style from "@/styles/pages/Company.module.scss"
 import CompanyDetailViewModel from "@/viewmodel/company/detail/company_detail_viewmodel"
 import Button from "@/components/general/Button"
+import ProjectList from "@/components/project/list/ProjectList"
 
 const CompanyDetailPage = () => {
   const router = useRouter()
@@ -16,7 +17,7 @@ const CompanyDetailPage = () => {
 
   useEffect(() => {
     viewModel.init(router.query.name as string)
-  }, [viewModel, router.query.name])
+  }, [router.query.name])
 
   const company = viewModel.company
   return (
@@ -39,14 +40,20 @@ const CompanyDetailPage = () => {
                 <p className={style.description}>{company.description}</p>
                 <Button
                   title={"Visit website"}
-                  linkTo={company.links.website} 
-                  target="_blank"/>
+                  linkTo={company.links.website}
+                  target="_blank" />
+                <div className={style.phoneProjectList}>
+                  <ProjectList
+                    projects={company.projects} />
+                </div>
                 <LinkSection
                   title="Dev team"
                   largeImages={false}
                   links={viewModel.devTeamLinks} />
               </div>
               <div className={style.screenshotContainer}>
+                <ProjectList
+                  projects={company.projects} />
               </div>
             </div>
         }

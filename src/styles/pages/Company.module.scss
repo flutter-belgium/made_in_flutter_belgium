@@ -1,7 +1,9 @@
 @import '@/styles/colors';
+@import '@/styles/mixins';
 
 .container {
     display: flex;
+    gap: 3em;
 
     .titleContainer {
         display: flex;
@@ -14,7 +16,7 @@
     }
 
     .infoContainer {
-        width: 100%;
+        flex: 5;
 
         p {
             font-size: 16px;
@@ -26,8 +28,33 @@
         }
     }
 
-    .screenshotContainer {
-        width: 60%;
+    .phoneProjectList {
         display: none;
+
+        margin: 3em 0;
+
+        @include belowPhone {
+            display: block;
+        }
+
+        @include betweenPhoneAndTabletPortrait {
+            display: block;
+        }
+    }
+
+    .screenshotContainer {
+        flex: 6;
+
+        @include belowPhone {
+            display: none;
+        }
+
+        @include betweenPhoneAndTabletPortrait {
+            display: none;
+        }
+
+        @include betweenTabletPortraitAndSmallLaptop {}
+
+        @include belowLaptops {}
     }
 }

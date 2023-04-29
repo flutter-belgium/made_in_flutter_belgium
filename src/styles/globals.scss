@@ -30,19 +30,19 @@ body {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 45px;
     margin: 0;
     @include belowPhone {
-        font-size: 35px;
+        font-size: 30px;
     }
     @include betweenPhoneAndTabletPortrait {
-        font-size: 45px;
+        font-size: 37px;
     }
     @include betweenTabletPortraitAndSmallLaptop {
-        font-size: 50px;
+        font-size: 40px;
     }
     @include belowLaptops {
-        font-size: 60px;
+        font-size: 45px;
     }
 }
 

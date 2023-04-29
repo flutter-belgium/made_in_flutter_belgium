@@ -16,7 +16,6 @@ export default function ProjectListViewModel() {
         try {
             const projects = await projectsRepo.getMinimizedProjects()
             setProjects(projects)
-            console.log(projects)
         } catch (e) {
             logError('Failed to get minimized projects', e)
             setError(e)
