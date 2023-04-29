@@ -3,6 +3,10 @@
 # CLEAR OLD BUILD FILES
 rm -rf out_full_export
 
+# INSTALL DEPENDENCIES
+
+npm install
+
 # BUILD NL
 npm run export
 
