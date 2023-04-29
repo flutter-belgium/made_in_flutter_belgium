@@ -1,0 +1,11 @@
+@import '@/styles/colors';
+
+
+.titleContainer {
+    margin-bottom: 3em;
+
+    p {
+        font-size: 16px;
+        color: $color-primary-light;
+    }
+}
