@@ -42,7 +42,7 @@ const CompanyDetailPage = () => {
                   title={"Visit website"}
                   linkTo={company.links.website}
                   target="_blank" />
-                <div className={style.phoneProjectList}>
+                <div className={style.phoneProjectListContainer}>
                   <ProjectList
                     projects={company.projects} />
                 </div>
@@ -51,7 +51,7 @@ const CompanyDetailPage = () => {
                   largeImages={false}
                   links={viewModel.devTeamLinks} />
               </div>
-              <div className={style.screenshotContainer}>
+              <div className={style.projectListContainer}>
                 <ProjectList
                   projects={company.projects} />
               </div>

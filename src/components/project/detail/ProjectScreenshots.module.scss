@@ -1,0 +1,12 @@
+@import '@/styles/colors';
+@import '@/styles/mixins';
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    img {
+        object-fit: contain;
+    }
+}

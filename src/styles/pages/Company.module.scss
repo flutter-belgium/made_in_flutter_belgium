@@ -28,7 +28,7 @@
         }
     }
 
-    .phoneProjectList {
+    .phoneProjectListContainer {
         display: none;
 
         margin: 3em 0;
@@ -42,7 +42,7 @@
         }
     }
 
-    .screenshotContainer {
+    .projectListContainer {
         flex: 6;
 
         @include belowPhone {
@@ -52,9 +52,5 @@
         @include betweenPhoneAndTabletPortrait {
             display: none;
         }
-
-        @include betweenTabletPortraitAndSmallLaptop {}
-
-        @include belowLaptops {}
     }
 }
