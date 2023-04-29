@@ -3,10 +3,15 @@
 const path = require('path')
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   env: {
     locale: 'nl',
     basePath: '/',
+  },
+  images: {
+    domains: [
+      'api.madein.flutterbelgium.be',
+    ],
   },
   sassOptions: {
     includePaths: [

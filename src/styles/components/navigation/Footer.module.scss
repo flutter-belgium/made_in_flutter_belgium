@@ -25,4 +25,14 @@
     .activeLocale {
         color: $color-accent;
     }
+
+    .linkContainer {
+        display: flex;
+        gap: 1em;
+
+        button {
+            background: none;
+            cursor: pointer;
+        }
+    }
 }

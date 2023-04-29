@@ -1,0 +1,14 @@
+@import '@/styles/colors';
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2em;
+
+    .projectItem {
+        aspect-ratio: 1/1;
+        width: 100%;
+        height: 100%;
+    }
+}

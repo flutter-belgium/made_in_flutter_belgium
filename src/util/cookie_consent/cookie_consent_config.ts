@@ -37,13 +37,9 @@ const config: Config = {
     },
     "customizeLabel": "Customize"
 }
-var isConfigured = false
 
 const configureCookieConsent = () => {
-    console.log('configureCookieConsent')
-    if (isConfigured) return
     init(config)
-    isConfigured = true
     setCorrectPreferences(getPreferences())
     onPreferencesChanged((preferences) => {
         setCorrectPreferences(preferences)

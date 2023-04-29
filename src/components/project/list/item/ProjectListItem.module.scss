@@ -1,0 +1,11 @@
+@import '@/styles/colors';
+
+
+.container {
+    img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 1em;
+    }
+}

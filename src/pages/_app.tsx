@@ -7,6 +7,7 @@ import { withTranslations } from '@/util/locale/localization'
 import configureCookieConsent, { gaClientId } from '@/util/cookie_consent/cookie_consent_config'
 import React from 'react'
 import Script from 'next/script'
+import { configureApi } from '@/service/api_service'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -15,6 +16,7 @@ const poppins = Poppins({
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   withTranslations()
+  configureApi()
 
   useEffect(() => {
     configureCookieConsent()

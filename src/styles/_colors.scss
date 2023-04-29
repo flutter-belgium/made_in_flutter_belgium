@@ -1,9 +1,12 @@
 $color-primary: black;
-$color-accent: #c10a16;
+$color-primary-light: #767676;
+$color-primary-ultra-light: #F2F2F2;
+$color-accent: #FF0F21;
+
 $color-accent-dark: rgba($color-accent, 0.88);
 $color-accent-light: rgba($color-accent, 0.5);
-$color-text: black;
-$color-text-secondary: grey;
+$color-text: $color-primary;
+$color-text-secondary: $color-primary-light;
 $color-text-inverted: white;
 $color-text-hover: grey;
 $color-background: white;
