@@ -6,6 +6,7 @@ interface Company {
         profilePictureUrl: string,
         role?: string,
     }>,
+    projects: Array<MinimizedProject>,
     links: {
         website?: string,
     },
