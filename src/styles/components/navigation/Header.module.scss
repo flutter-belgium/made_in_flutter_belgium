@@ -1,0 +1,108 @@
+@import '../../colors';
+@import '../../mixins';
+
+.rootContainer {
+    background-color: $color-primary-ultra-light;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3em;
+
+        @include belowTabletAndSmallLaptops {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        .primaryHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                height: 42;
+            }
+
+            a {
+                display: flex;
+            }
+
+            @include belowTabletAndSmallLaptops {
+                display: flex;
+            }
+
+            .logo {
+                height: 60px;
+                margin: 1em 0;
+            }
+
+            .mobileMenuButton {
+                display: none;
+
+                @include belowTabletAndSmallLaptops {
+                    display: flex;
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            margin: 0 4em;
+
+            @include belowTabletAndSmallLaptops {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 500;
+                text-decoration: none;
+                padding: 28px 28px;
+                display: flex;
+                align-items: center;
+
+            }
+
+            .triangle {
+                visibility: hidden;
+                margin-right: 1rem;
+            }
+
+            a:hover:not(.active) {
+                color: $color-accent;
+            }
+
+            .active {
+                color: $color-accent;
+
+                .triangle {
+                    visibility: visible;
+                }
+            }
+
+            .active:hover {
+                color: $color-accent-dark;
+            }
+        }
+
+        .openMobileMenu {
+            @include belowTabletAndSmallLaptops {
+                display: flex;
+            }
+        }
+
+        .closeMobileMenu {
+            @include belowTabletAndSmallLaptops {
+                display: none;
+            }
+        }
+    }
+}
