@@ -9,7 +9,7 @@ interface ProjectListItemProps {
 const ProjectListItem = (props: ProjectListItemProps) => {
     return (
         <div className={style.container}>
-            <Link href={`/project?projectName=${props.project.name}`} passHref>
+            <Link href={`/project?name=${props.project.name}`} passHref>
                 <Image
                     width={250}
                     height={250}
