@@ -46,6 +46,7 @@ const ProjectDetailPage = () => {
                         href={project.links.appstore}
                         target="_blank">
                         <Image
+                          className={style.appStore}
                           width={200}
                           height={68}
                           src='images/appstore.svg'
@@ -59,8 +60,9 @@ const ProjectDetailPage = () => {
                         href={project.links.playstore}
                         target="_blank">
                         <Image
+                          className={style.playstoreImg}
                           width={220}
-                          height={68}
+                          height={65}
                           src='images/playstore.svg'
                           alt={"Playstore"} />
                       </Link>

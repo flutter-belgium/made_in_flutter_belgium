@@ -3,20 +3,21 @@
 
 .container {
 
-
     .largeContainer {
         img {
             border-radius: 0;
+            width: 96px;
         }
     }
 
     .smallContainer {
         img {
             border-radius: 9999999em;
+            width: 48px;
         }
     }
     img {
         object-fit: contain;
-        width: auto;
+        height: auto;
     }
 }

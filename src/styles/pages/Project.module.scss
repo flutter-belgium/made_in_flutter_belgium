@@ -12,6 +12,9 @@
 
         img {
             border-radius: 16%;
+            max-width: 48px;
+            width: auto;
+            height: auto;
         }
     }
 
@@ -31,6 +34,15 @@
 
             img {
                 max-width: 100%;
+            }
+
+            .appStore {
+                width: 210px;
+                height: auto;
+            }
+
+            .playStore {
+                width: 220px;
                 height: auto;
             }
         }
