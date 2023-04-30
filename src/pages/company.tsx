@@ -31,11 +31,16 @@ const CompanyDetailPage = () => {
               <div className={style.infoContainer}>
                 <div className={style.titleContainer}>
                   <Image
-                    height={48}
-                    width={48}
+                    className={company.useLogoInsteadOfTextTitle ? style.titleImage : style.titleText}
+                    height={company.useLogoInsteadOfTextTitle ? 64 : 48}
+                    width={company.useLogoInsteadOfTextTitle ? 64 : 48}
                     alt={company.name}
                     src={company.images.logoUrl} />
-                  <h1>{company.name}</h1>
+                  {
+                    company.useLogoInsteadOfTextTitle ?
+                      null :
+                      <h1>{company.name}</h1>
+                  }
                 </div>
                 <p className={style.description}>{company.description}</p>
                 <Button

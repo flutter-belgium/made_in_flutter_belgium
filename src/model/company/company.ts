@@ -1,6 +1,7 @@
 interface Company {
     name: string,
     description: string,
+    useLogoInsteadOfTextTitle: boolean,
     developers: Array<{
         githubUserName: string,
         profilePictureUrl: string,
