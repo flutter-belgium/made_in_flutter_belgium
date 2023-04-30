@@ -16,7 +16,8 @@ const LinkSectionItem = (props: LinkSectionItemProps) => {
                         height={props.largeIcons ? 96 : 48}
                         width={props.largeIcons ? 96 : 48}
                         src={props.link.imageUrl}
-                        alt={props.link.title} />
+                        alt={props.link.title}
+                        priority={false} />
                 </Link>
             </div>
         </div>

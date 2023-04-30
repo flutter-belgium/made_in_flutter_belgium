@@ -13,7 +13,7 @@
   --ct-title: #{$color-text};
 
   /* The color used to style the cookie svg */
-  --ct-cookie: var(--ct-primary-400);
+  --ct-cookie: var(--ct-primary-300);
 
   /* The colors used to style a policy */
   --ct-policy:  #{$color-text};
@@ -57,11 +57,11 @@
   --ct-button-radius: 2px;
   --ct-button-border: 0;
   --ct-button-padding: 0.5rem;
-  --ct-button: var(--ct-primary-400);
+  --ct-button: var(--ct-primary-300);
   --ct-button-color: var(--ct-white);
   --ct-button-secondary-border: 0;
-  --ct-button-secondary: var(--ct-primary-300);
-  --ct-button-secondary-color: var(--ct-white);
+  --ct-button-secondary: #{rgba($color-text, 0.2)};
+  --ct-button-secondary-color: var(--ct-primary-300);
 
   /* The font and font weight used in the app */
   --ct-primary-font: 'Poppins', sans-serif;
