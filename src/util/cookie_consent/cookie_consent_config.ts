@@ -51,10 +51,10 @@ export const openCookieConsent = () => {
 }
 
 const setCorrectPreferences = (preferences: CookiePreferences) => {
-    const statisticsPrefs = preferences.cookieOptions.find((e) => e.id == 'statistics')
-    window.gtag('consent', 'update', {
-        analytics_storage: statisticsPrefs?.isEnabled ? 'granted' : 'denied',
-    });
+    // const statisticsPrefs = preferences.cookieOptions.find((e) => e.id == 'statistics')
+    // window.gtag('consent', 'update', {
+    //     analytics_storage: statisticsPrefs?.isEnabled ? 'granted' : 'denied',
+    // });
 }
 
 export default configureCookieConsent
