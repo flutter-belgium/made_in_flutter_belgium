@@ -20,7 +20,9 @@
             justify-content: space-between;
 
             .logo {
-                height: 42;
+                max-width: 100%;
+                width: auto;
+                height: auto;
             }
 
             a {
