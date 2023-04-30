@@ -2,6 +2,7 @@ import { getPreferences, show, init, onPreferencesChanged } from 'cookie-though'
 import { Config, CookiePreferences } from 'cookie-though/dist/types/types'
 import { translations } from '@/util/locale/localization'
 import appConfig from '@/config/appConfig'
+import isCrawler from '@/util/crawler/crawler_detector'
 
 export const gaClientId = 'TODO-ADD-GA-CLIENT-ID'
 
@@ -39,6 +40,8 @@ const config: Config = {
 }
 
 const configureCookieConsent = () => {
+    if (isCrawler()) return
+
     init(config)
     setCorrectPreferences(getPreferences())
     onPreferencesChanged((preferences) => {
@@ -47,6 +50,7 @@ const configureCookieConsent = () => {
 }
 
 export const openCookieConsent = () => {
+    if (isCrawler()) return
     show()
 }
 

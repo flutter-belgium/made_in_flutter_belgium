@@ -2,22 +2,21 @@
 
 
 .container {
-
     .largeContainer {
         img {
             border-radius: 0;
-            width: 96px;
+            max-height: 96px;
         }
     }
 
     .smallContainer {
         img {
             border-radius: 9999999em;
-            width: 48px;
+            max-height: 48px;
         }
     }
     img {
         object-fit: contain;
-        height: auto;
+        width: auto;
     }
 }
