@@ -13,6 +13,7 @@ export default function CompanyDetailViewModel() {
     }
 
     async function getData(companyName: string) {
+        if (!companyName) return
         setLoading(true)
         try {
             const company = await companyRepo.getCompany(companyName)
