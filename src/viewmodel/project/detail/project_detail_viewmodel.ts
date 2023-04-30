@@ -14,6 +14,7 @@ export default function ProjectDetailViewModel() {
     }
 
     async function getData(projectName: string) {
+        if (!projectName) return
         setLoading(true)
         try {
             const project = await projectRepo.getProject(projectName)

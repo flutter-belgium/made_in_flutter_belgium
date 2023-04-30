@@ -1,6 +1,6 @@
-import appConfig from '@/config/appConfig';
-import { translations } from '@/util/locale/localization';
-import Head from 'next/head';
+import appConfig from '@/config/appConfig'
+import { translations } from '@/util/locale/localization'
+import Head from 'next/head'
 import React from 'react'
 
 interface MetaProps {
@@ -25,7 +25,7 @@ const Meta = (props: MetaProps) => {
         )}
       </Head>
     </>
-  );
+  )
 }
 
 Meta.defaultProps = defaultProps

@@ -7,7 +7,7 @@ import { useEffect } from "react"
 import PageContainer from "@/components/general/PageContainer"
 
 const HomePage = () => {
-  const viewModel = ProjectListViewModel();
+  const viewModel = ProjectListViewModel()
 
   useEffect(() => {
     viewModel.init()

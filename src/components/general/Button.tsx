@@ -13,7 +13,7 @@ const Button = (props: ButtonProps) => {
   const onClick = () => {
     const onClickProp = props.onClick
     if (onClickProp == null || onClickProp == undefined) return
-    onClickProp();
+    onClickProp()
   }
 
   if (props.onClick != null) {
