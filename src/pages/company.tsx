@@ -22,7 +22,7 @@ const CompanyDetailPage = () => {
   const company = viewModel.company
   return (
     <>
-      <Meta title={company?.name ?? appConfig.website.name} />
+      <Meta title={`Company: ${company?.name ?? appConfig.website.name}`} />
       <PageContainer>
         {
           company == null ?
