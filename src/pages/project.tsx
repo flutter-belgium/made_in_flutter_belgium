@@ -22,7 +22,7 @@ const ProjectDetailPage = () => {
   const project = viewModel.project
   return (
     <>
-      <Meta title={appConfig.website.name} />
+      <Meta title={project?.name ?? appConfig.website.name} />
       <PageContainer>
         {
           project == null ?
