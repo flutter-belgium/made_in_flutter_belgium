@@ -5,6 +5,7 @@ import ProjectListViewModel from "@/viewmodel/project/list/project_list_viewmode
 import styles from "@/styles/pages/Index.module.scss"
 import { useEffect } from "react"
 import PageContainer from "@/components/general/PageContainer"
+import { translations } from "@/util/locale/localization"
 
 const HomePage = () => {
   const viewModel = ProjectListViewModel()
@@ -18,8 +19,8 @@ const HomePage = () => {
       <Meta title={appConfig.website.name} />
       <PageContainer>
         <div className={styles.titleContainer}>
-          <h1>made in (Flutter) Belgium</h1>
-          <p>This collection of applications developed, published or contributed by Belgian developers or companies using the Flutter technology. This showcases the innovative and creative work of local developers and companies in the mobile/web app space.</p>
+          <h1>{translations.projects_title}</h1>
+          <p>{translations.projects_subtitle}</p>
         </div>
         <ProjectList
           projects={viewModel.projects} />

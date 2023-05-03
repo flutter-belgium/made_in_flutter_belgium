@@ -1,4 +1,5 @@
 import style from '@/components/project/detail/ProjectScreenshots.module.scss'
+import { translations } from '@/util/locale/localization'
 import Image from 'next/image'
 
 interface ProjectScreenshotsProps {
@@ -17,7 +18,7 @@ const ProjectScreenshots = (props: ProjectScreenshotsProps) => {
                         key={index}
                         width={180}
                         height={320}
-                        alt={`Screenshot ${index + 1}`}
+                        alt={`${translations.alt_screenshot} ${index + 1}`}
                         src={url} />
                 ))
             }

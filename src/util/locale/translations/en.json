@@ -1,8 +1,23 @@
 {
+    "alt_logo_flutter_belgium": "Logo Flutter Belgium",
+    "alt_screenshot": "Screenshot ",
+    "alt_appstore": "AppStore",
+    "alt_playstore": "Playstore",
+    "projects_title": "made in (Flutter) Belgium",
+    "projects_subtitle": "This collection of applications developed, published or contributed by Belgian developers or companies using the Flutter technology. This showcases the innovative and creative work of local developers and companies in the mobile/web app space.",
+    "projects_add_project_btn": "Add project",
+    "project_detail_publisher_title": "Publisher",
+    "project_detail_dev_team_title": "Dev team",
+    "company_detail_website_btn": "Visit website",
+    "company_detail_dev_team_title": "Dev Team",
     "meta_description": "This collection of applications developed, published or contributed by Belgian developers or companies using the Flutter technology. This showcases the innovative and creative work of local developers and companies in the mobile/web app space.",
     "meta_keywords": "Flutter,Dart,FlutterBelgium,Google,Belgium,Mobile,Web,Development,Custom Development,Portfolio,",
     "nav_home": "Home",
     "error_404": "This page could not be found",
+    "header_github_btn_label": "Visit the data repository",
+    "header_menu_btn_label": "Menu",
+    "footer_cookie_btn_label": "Show cookie consent",
+    "footer_bug_btn_label": "Report bug",
     "disclamer_dev": "Website by",
     "cookie_policy_title": "Cookie policy",
     "cookie_policy_text": "Add cookie policy",
@@ -19,5 +34,6 @@
     "cookie_consent_policy_read_more": "Read the cookie policy",
     "cookie_consent_decline_btn": "Deny",
     "cookie_consent_accept_btn": "Accept",
-    "cookie_consent_accept_all_btn": "Accept all"
+    "cookie_consent_accept_all_btn": "Accept all",
+    "cookie_consent_customize_btn": "Customize"
 }

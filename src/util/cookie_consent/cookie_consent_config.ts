@@ -36,7 +36,7 @@ const config: Config = {
         "url": appConfig.website.cookiePolicy,
         "label": translations.cookie_consent_policy_read_more,
     },
-    "customizeLabel": "Customize"
+    "customizeLabel": translations.cookie_consent_customize_btn
 }
 
 const configureCookieConsent = () => {

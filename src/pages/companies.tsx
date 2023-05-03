@@ -11,7 +11,7 @@ import Button from "@/components/general/Button"
 import ProjectList from "@/components/project/list/ProjectList"
 import { translations } from "@/util/locale/localization"
 
-const CompanyDetailPage = () => {
+const CompanyListPage = () => {
   const router = useRouter()
 
   const viewModel = CompanyDetailViewModel()
@@ -68,4 +68,4 @@ const CompanyDetailPage = () => {
   )
 }
 
-export default CompanyDetailPage
+export default CompanyListPage
