@@ -4,7 +4,7 @@ import { translations } from '@/util/locale/localization'
 import appConfig from '@/config/appConfig'
 import isCrawler from '@/util/crawler/crawler_detector'
 
-export const gaClientId = 'TODO-ADD-GA-CLIENT-ID'
+export const gaClientId = 'G-J2706NEJ64'
 
 const config: Config = {
     "policies": [
@@ -55,10 +55,10 @@ export const openCookieConsent = () => {
 }
 
 const setCorrectPreferences = (preferences: CookiePreferences) => {
-    // const statisticsPrefs = preferences.cookieOptions.find((e) => e.id == 'statistics')
-    // window.gtag('consent', 'update', {
-    //     analytics_storage: statisticsPrefs?.isEnabled ? 'granted' : 'denied',
-    // })
+    const statisticsPrefs = preferences.cookieOptions.find((e) => e.id == 'statistics')
+    window.gtag('consent', 'update', {
+        analytics_storage: statisticsPrefs?.isEnabled ? 'granted' : 'denied',
+    })
 }
 
 export default configureCookieConsent
