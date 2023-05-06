@@ -23,6 +23,9 @@
     }
 
     .infoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
         flex: 5;
 
         p {
@@ -32,6 +35,12 @@
 
         .description {
             margin-bottom: 2em;
+        }
+
+        .websiteContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
         }
     }
 

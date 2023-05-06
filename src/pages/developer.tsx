@@ -6,6 +6,8 @@ import Image from "next/image"
 import style from "@/styles/pages/Developer.module.scss"
 import ProjectList from "@/components/project/list/ProjectList"
 import DeveloperDetailViewModel from "@/viewmodel/developer/detail/developer_detail_viewmodel"
+import Button from "@/components/general/Button"
+import { translations } from "@/util/locale/localization"
 
 const CompanyDetailPage = () => {
   const router = useRouter()
@@ -37,6 +39,22 @@ const CompanyDetailPage = () => {
                   <h1>{name}</h1>
                 </div>
                 <p className={style.description}>{developer.description}</p>
+                <div className={style.websiteContainer}>
+                  {
+                    developer.links?.personalWebsite == null ? <></> :
+                      <Button
+                        title={translations.developer_detail_personal_website_btn}
+                        linkTo={developer.links.personalWebsite}
+                        target="_blank" />
+                  }
+                  {
+                    developer.links?.freelanceWebsite == null ? <></> :
+                      <Button
+                        title={translations.developer_detail_freelance_website_btn}
+                        linkTo={developer.links.freelanceWebsite}
+                        target="_blank" />
+                  }
+                </div>
                 <div className={style.phoneProjectListContainer}>
                   <ProjectList
                     projects={developer.projects} />
