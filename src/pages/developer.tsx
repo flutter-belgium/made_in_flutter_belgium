@@ -17,9 +17,10 @@ const CompanyDetailPage = () => {
   }, [router.query.githubUserName])
 
   const developer = viewModel.developer
+  const name = developer?.name ?? developer?.githubUserName
   return (
     <>
-      <Meta title={`Developer: ${developer?.name ?? developer?.githubUserName}`} />
+      <Meta title={`Developer: ${name}`} />
       <PageContainer>
         {
           developer == null ?
@@ -33,7 +34,7 @@ const CompanyDetailPage = () => {
                     width={64}
                     alt={developer.name ?? developer.githubUserName}
                     src={developer.images.profilePictureUrl} />
-                  <h1>{developer.name}</h1>
+                  <h1>{name}</h1>
                 </div>
                 <p className={style.description}>{developer.description}</p>
                 <div className={style.phoneProjectListContainer}>
