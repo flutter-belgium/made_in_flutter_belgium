@@ -3,6 +3,8 @@
     "alt_screenshot": "Screenshot ",
     "alt_appstore": "AppStore",
     "alt_playstore": "Playstore",
+    "companies_title": "Companies using Flutter in Belgium",
+    "companies_subtitle": "Product companies, agencies, governement, universities,... a lot of them are using Flutter. This list shows who is actually using Flutter in production.",
     "projects_title": "made in (Flutter) Belgium",
     "projects_subtitle": "This collection of applications developed, published or contributed by Belgian developers or companies using the Flutter technology. This showcases the innovative and creative work of local developers and companies in the mobile/web app space.",
     "projects_add_project_btn": "Add project",
