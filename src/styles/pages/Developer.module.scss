@@ -1,0 +1,63 @@
+@import '@/styles/colors';
+@import '@/styles/mixins';
+
+.container {
+    display: flex;
+    gap: 3em;
+
+    .titleContainer {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+
+        .titleImage {
+            width: auto;
+            max-height: 64px;
+            border-radius: 100%;
+        }
+
+        titleText {
+            width: auto;
+            max-height: 48px;
+        }
+    }
+
+    .infoContainer {
+        flex: 5;
+
+        p {
+            font-size: 16px;
+            color: $color-primary-light;
+        }
+
+        .description {
+            margin-bottom: 2em;
+        }
+    }
+
+    .phoneProjectListContainer {
+        display: none;
+
+        margin: 3em 0;
+
+        @include belowPhone {
+            display: block;
+        }
+
+        @include betweenPhoneAndTabletPortrait {
+            display: block;
+        }
+    }
+
+    .projectListContainer {
+        flex: 6;
+
+        @include belowPhone {
+            display: none;
+        }
+
+        @include betweenPhoneAndTabletPortrait {
+            display: none;
+        }
+    }
+}
