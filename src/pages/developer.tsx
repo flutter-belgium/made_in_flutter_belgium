@@ -31,7 +31,7 @@ const CompanyDetailPage = () => {
               <div className={style.infoContainer}>
                 <div className={style.titleContainer}>
                   <Image
-                    className={style.titleImage}
+                    className={style.profilePictureImage}
                     height={64}
                     width={64}
                     alt={developer.name ?? developer.githubUserName}
