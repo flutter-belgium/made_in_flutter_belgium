@@ -49,6 +49,7 @@
 
         .links {
             display: flex;
+            gap: 2em;
 
             @include belowTabletAndSmallLaptops {
                 flex-direction: column;
@@ -61,27 +62,27 @@
                 text-decoration: none;
                 display: flex;
                 align-items: center;
-
             }
 
-            a:hover:not(.active) {
-                color: $color-accent;
+            .githubIcon {
+                margin-right: 1em;
             }
 
             .active {
                 color: $color-accent;
-            }
-
-            .active:hover {
-                color: $color-accent-dark;
             }
         }
 
         .openMobileMenu {
             @include belowTabletAndSmallLaptops {
                 display: flex;
+                gap: 0;
                 align-items: center;
                 padding: 0 0 1em 0;
+            }
+
+            .githubIcon {
+                margin: 0.5em;
             }
         }
 

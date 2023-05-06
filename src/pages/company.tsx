@@ -9,6 +9,7 @@ import style from "@/styles/pages/Company.module.scss"
 import CompanyDetailViewModel from "@/viewmodel/company/detail/company_detail_viewmodel"
 import Button from "@/components/general/Button"
 import ProjectList from "@/components/project/list/ProjectList"
+import { translations } from "@/util/locale/localization"
 
 const CompanyDetailPage = () => {
   const router = useRouter()
@@ -44,7 +45,7 @@ const CompanyDetailPage = () => {
                 </div>
                 <p className={style.description}>{company.description}</p>
                 <Button
-                  title={"Visit website"}
+                  title={translations.company_detail_website_btn}
                   linkTo={company.links.website}
                   target="_blank" />
                 <div className={style.phoneProjectListContainer}>
@@ -52,7 +53,7 @@ const CompanyDetailPage = () => {
                     projects={company.projects} />
                 </div>
                 <LinkSection
-                  title="Dev team"
+                  title={translations.company_detail_dev_team_title}
                   largeImages={false}
                   links={viewModel.devTeamLinks} />
               </div>

@@ -1,27 +1,27 @@
-import style from '@/components/project/list/ProjectList.module.scss'
-import ProjectListItem from './item/ProjectListItem'
+import style from '@/components/company/list/CompanyList.module.scss'
+import CompanyListItem from './item/CompanyListItem'
 import Link from 'next/link'
 import { translations } from '@/util/locale/localization'
 
-interface ProjectListProps {
-    projects: Array<MinimizedProject>,
+interface CompanyListProps {
+    companies: Array<MinimizedCompany>,
 }
 
-const ProjectList = (props: ProjectListProps) => {
+const CompanyList = (props: CompanyListProps) => {
     return (
         <div className={style.container}>
             {
-                props.projects.map((project, index) => (
-                    <ProjectListItem
+                props.companies.map((company, index) => (
+                    <CompanyListItem
                         key={index}
-                        project={project} />
+                        company={company} />
                 ))
             }
             <Link
-                className={style.addProjectContainer}
-                href='https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects'
+                className={style.addCompanyContainer}
+                href='https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies'
                 target='_blank'
-                aria-label={translations.projects_add_project_btn}>
+                aria-label={translations.companies_add_company_btn}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                     <rect width="256" height="256" fill="none" />
                     <line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16" />
@@ -33,4 +33,4 @@ const ProjectList = (props: ProjectListProps) => {
 }
 
 
-export default ProjectList
+export default CompanyList

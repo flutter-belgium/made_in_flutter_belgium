@@ -9,6 +9,7 @@ import CompanyDetailViewModel from "@/viewmodel/project/detail/project_detail_vi
 import style from "@/styles/pages/Project.module.scss"
 import Link from "next/link"
 import ProjectScreenshots from "@/components/project/detail/ProjectScreenshots"
+import { translations } from "@/util/locale/localization"
 
 const ProjectDetailPage = () => {
   const router = useRouter()
@@ -50,7 +51,7 @@ const ProjectDetailPage = () => {
                           width={200}
                           height={68}
                           src='images/appstore.svg'
-                          alt={"AppStore"} />
+                          alt={translations.alt_appstore} />
                       </Link>
                   )}
                   {(
@@ -64,7 +65,7 @@ const ProjectDetailPage = () => {
                           width={220}
                           height={65}
                           src='images/playstore.svg'
-                          alt={"Playstore"} />
+                          alt={translations.alt_playstore} />
                       </Link>
                   )}
                 </div>
@@ -75,11 +76,11 @@ const ProjectDetailPage = () => {
                     screenshotUrls={project.images.screenshotUrls} />
                 </div>
                 <LinkSection
-                  title="Publisher"
+                  title={translations.project_detail_publisher_title}
                   largeImages={true}
                   links={viewModel.publisherLinks} />
                 <LinkSection
-                  title="Dev team"
+                  title={translations.project_detail_dev_team_title}
                   largeImages={false}
                   links={viewModel.devTeamLinks} />
               </div>
