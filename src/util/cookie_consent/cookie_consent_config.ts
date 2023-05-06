@@ -41,7 +41,6 @@ const config: Config = {
 
 const configureCookieConsent = () => {
     if (isCrawler()) return
-
     init(config)
     setCorrectPreferences(getPreferences())
     onPreferencesChanged((preferences) => {

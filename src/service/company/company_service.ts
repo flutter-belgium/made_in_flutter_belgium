@@ -1,6 +1,6 @@
 import { apiClient } from "@/service/api_service"
 
-export async function getCompanies(): Promise<Array<Company>> {
+export async function getMinimizedCompanies(): Promise<Array<MinimizedCompany>> {
     const result = await apiClient.get('companies/minimized_all.json')
     return result.data
 }

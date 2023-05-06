@@ -9,30 +9,23 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2em;
 
     @include belowPhone {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     @include betweenPhoneAndTabletPortrait {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    @include betweenTabletPortraitAndSmallLaptop {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    @include belowLaptops {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .addProjectContainer {
-        aspect-ratio: 1/1;
+    .addCompanyContainer {
+        aspect-ratio: 3/1;
+        border-radius: 1em;
         margin-bottom: 8px;
         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23767676FF' stroke-width='4' stroke-dasharray='8%2c8' stroke-dashoffset='0' strokeLinecap='square'/%3e%3c/svg%3e");
-        border-radius: 16px;
+        border-radius: 1em;
         display: flex;
         justify-content: center;
         align-items: center;

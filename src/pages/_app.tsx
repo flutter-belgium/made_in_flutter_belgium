@@ -8,6 +8,7 @@ import configureCookieConsent, { gaClientId } from '@/util/cookie_consent/cookie
 import React from 'react'
 import Script from 'next/script'
 import { configureApi } from '@/service/api_service'
+import { useRouter } from 'next/router'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -15,10 +16,15 @@ const poppins = Poppins({
 })
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter()
   withTranslations()
   configureApi()
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hostname = window.location.hostname;
+      if(hostname == 'localhost')return;
+    }
     configureCookieConsent()
   }, [])
 
