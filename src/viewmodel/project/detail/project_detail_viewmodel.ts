@@ -6,6 +6,7 @@ export default function ProjectDetailViewModel() {
     const [error, setError] = useState("")
     const [publisherLinks, setPublisherLinks] = useState<Array<LinkItem>>([])
     const [devTeamLinks, setDevTeamLinks] = useState<Array<LinkItem>>([])
+    const [involvedCompanies, setInvolvedCompanies] = useState<Array<LinkItem>>([])
     const [isLoading, setLoading] = useState(true)
     const [project, setProject] = useState<Project>()
 
@@ -23,6 +24,11 @@ export default function ProjectDetailViewModel() {
                 title: e.githubUserName,
                 imageUrl: e.profilePictureUrl,
                 website: `/developer?githubUserName=${e.githubUserName}`,
+            })))
+            setInvolvedCompanies(project.involvedCompanies.map((e) => ({
+                title: e.name,
+                imageUrl: e.logoUrl,
+                website: `/company?name=${e.name}`,
             })))
             if (project.publisher) {
                 setPublisherLinks([{
@@ -43,6 +49,7 @@ export default function ProjectDetailViewModel() {
         error,
         project,
         publisherLinks,
+        involvedCompanies,
         devTeamLinks,
     }
 }

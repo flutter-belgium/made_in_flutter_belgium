@@ -10,6 +10,7 @@ import style from "@/styles/pages/Project.module.scss"
 import Link from "next/link"
 import ProjectScreenshots from "@/components/project/detail/ProjectScreenshots"
 import { translations } from "@/util/locale/localization"
+import { IconType } from "@/components/general/link/LinkSectionItem"
 
 const ProjectDetailPage = () => {
   const router = useRouter()
@@ -77,12 +78,16 @@ const ProjectDetailPage = () => {
                 </div>
                 <LinkSection
                   title={translations.project_detail_publisher_title}
-                  largeImages={true}
+                  iconType={IconType.large}
                   links={viewModel.publisherLinks} />
                 <LinkSection
                   title={translations.project_detail_dev_team_title}
-                  largeImages={false}
+                  iconType={IconType.smallCircle}
                   links={viewModel.devTeamLinks} />
+                <LinkSection
+                  title={translations.project_detail_involved_companies_title}
+                  iconType={IconType.largeCircle}
+                  links={viewModel.involvedCompanies} />
               </div>
               {
                 project.images.screenshotUrls.length === 0 ?

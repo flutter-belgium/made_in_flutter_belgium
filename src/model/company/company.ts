@@ -8,10 +8,13 @@ interface Company {
         role?: string,
     }>,
     projects: Array<MinimizedProject>,
+    involvedProjects: Array<MinimizedProject>,
     links: {
         website?: string,
+        jobWebsite?: string,
     },
     images: {
         logoUrl: string,
     },
+    isAgency: boolean,
 }
