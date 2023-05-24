@@ -32,6 +32,23 @@
         .description {
             margin-bottom: 2em;
         }
+
+        .agencyDecsription {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .linksContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
     }
 
     .phoneProjectListContainer {

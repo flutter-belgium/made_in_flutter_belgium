@@ -9,12 +9,32 @@
         }
     }
 
-    .smallContainer {
+
+    .largeCircleContainer {
+        img {
+            border-radius: 0;
+            max-height: 64px;
+        }
+    }
+
+    .smallCircleContainer {
         img {
             border-radius: 9999999em;
             max-height: 48px;
+            height: 48px;
+            width: 48px;
         }
     }
+
+    .largeCircleContainer {
+        img {
+            border-radius: 9999999em;
+            max-height: 72px;
+            height: 72px;
+            width: 72px;
+        }
+    }
+
     img {
         object-fit: contain;
         width: auto;

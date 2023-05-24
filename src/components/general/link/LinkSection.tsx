@@ -1,9 +1,9 @@
 import style from '@/components/general/link/LinkSection.module.scss'
-import LinkSectionItem from '@/components/general/link/LinkSectionItem'
+import LinkSectionItem, { IconType } from '@/components/general/link/LinkSectionItem'
 
 interface LinkSectionProps {
     title: string,
-    largeImages: boolean,
+    iconType: IconType,
     links: Array<LinkItem>,
 }
 
@@ -17,7 +17,7 @@ const LinkSection = (props: LinkSectionProps) => {
                     props.links.map((link, index) => (
                         <LinkSectionItem
                             key={index}
-                            largeIcons={props.largeImages}
+                            iconType={props.iconType}
                             link={link} />
                     ))
                 }
@@ -25,6 +25,5 @@ const LinkSection = (props: LinkSectionProps) => {
         </div>
     )
 }
-
 
 export default LinkSection

@@ -4,17 +4,22 @@ import Link from 'next/link'
 
 interface LinkSectionItemProps {
     link: LinkItem,
-    largeIcons: boolean,
+    iconType: IconType,
 }
 
 const LinkSectionItem = (props: LinkSectionItemProps) => {
+    const isLarge = props.iconType == IconType.large || props.iconType == IconType.largeCircle;
     return (
         <div className={style.container}>
-            <div className={props.largeIcons ? style.largeContainer : style.smallContainer}>
+            <div className={
+                props.iconType == IconType.large ? style.largeContainer :
+                    props.iconType == IconType.smallCircle ? style.smallCircleContainer :
+                        style.largeCircleContainer
+            }>
                 <Link href={props.link.website}>
                     <Image
-                        height={props.largeIcons ? 64 : 48}
-                        width={props.largeIcons ? 64 : 48}
+                        height={isLarge ? 64 : 48}
+                        width={isLarge ? 64 : 48}
                         src={props.link.imageUrl}
                         alt={props.link.title}
                         priority={false} />
@@ -24,5 +29,10 @@ const LinkSectionItem = (props: LinkSectionItemProps) => {
     )
 }
 
+export enum IconType {
+    smallCircle,
+    largeCircle,
+    large,
+}
 
 export default LinkSectionItem

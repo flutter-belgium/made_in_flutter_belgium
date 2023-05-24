@@ -22,4 +22,5 @@ interface Project {
         mockupSecondaryUrl?: string,
         screenshotUrls: Array<string>,
     },
+    involvedCompanies: Array<MinimizedCompany>,
 }
