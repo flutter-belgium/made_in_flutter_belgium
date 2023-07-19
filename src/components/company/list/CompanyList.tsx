@@ -19,7 +19,7 @@ const CompanyList = (props: CompanyListProps) => {
             }
             <Link
                 className={style.addCompanyContainer}
-                href='https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/companies'
+                href='https://github.com/flutter-belgium/made_in_flutter_belgium_data/wiki/Companies'
                 target='_blank'
                 aria-label={translations.companies_add_company_btn}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
