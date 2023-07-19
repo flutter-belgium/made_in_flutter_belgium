@@ -24,7 +24,7 @@ const ProjectList = (props: ProjectListProps) => {
                 }
                 <Link
                     className={style.addProjectContainer}
-                    href='https://github.com/flutter-belgium/made_in_flutter_belgium_data/tree/main/examples/projects'
+                    href='https://github.com/flutter-belgium/made_in_flutter_belgium_data/wiki/Projects'
                     target='_blank'
                     aria-label={translations.projects_add_project_btn}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
