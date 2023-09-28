@@ -11,6 +11,7 @@ import Link from "next/link"
 import ProjectScreenshots from "@/components/project/detail/ProjectScreenshots"
 import { translations } from "@/util/locale/localization"
 import { IconType } from "@/components/general/link/LinkSectionItem"
+import Button from "@/components/general/Button"
 
 const ProjectDetailPage = () => {
   const router = useRouter()
@@ -69,6 +70,14 @@ const ProjectDetailPage = () => {
                           alt={translations.alt_playstore} />
                       </Link>
                   )}
+                  {(
+                    project.links.webApp == null
+                      ? null :
+                      <Button
+                        title={translations.project_btn_webapp}
+                        linkTo={project.links.webApp}
+                        target="_blank" />
+                  )}
                 </div>
                 <div className={style.phoneScreenshotContainer}>
                   <ProjectScreenshots
@@ -88,6 +97,25 @@ const ProjectDetailPage = () => {
                   title={translations.project_detail_involved_companies_title}
                   iconType={IconType.largeCircle}
                   links={viewModel.involvedCompanies} />
+                <h2>{translations.project_detail_links_title}</h2>
+                <div className={style.storeContainer}>
+                  {(
+                    project.links.marketingWebsite == null
+                      ? null :
+                      <Button
+                        title={translations.project_btn_marketing_website}
+                        linkTo={project.links.marketingWebsite}
+                        target="_blank" />
+                  )}
+                  {(
+                    project.links.openSourceCode == null
+                      ? null :
+                      <Button
+                        title={translations.project_btn_opensource_code}
+                        linkTo={project.links.openSourceCode}
+                        target="_blank" />
+                  )}
+                </div>
               </div>
               {
                 project.images.screenshotUrls.length === 0 ?

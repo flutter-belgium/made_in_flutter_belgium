@@ -10,9 +10,11 @@ interface Project {
     links: {
         appstore?: string,
         playstore?: string,
-        website?: string,
+        webApp?: string,
+        marketingWebsite?: string,
         youTube?: string,
         demoYouTubeVideo?: string,
+        openSourceCode?: string,
     },
     images: {
         appIconUrl: string,

@@ -29,6 +29,7 @@
 
         .storeContainer {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 1em;
             margin: 2em 0;
